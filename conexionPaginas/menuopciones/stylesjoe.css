@@ -1,0 +1,154 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #95aa61;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 20px; /* Añade espacio entre el formulario y la imagen */
+}
+
+/* Contenedor del panel */
+.dashboard-container {
+    background-color: #D6E68A;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 530px;
+    text-align: center;
+}
+
+/* Header con logo y título */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.header h1 {
+    color: #333;
+    margin-right: 30px;
+}
+
+.logo-header {
+    width: 100px;
+}
+
+/* Información del usuario */
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.user-info h2 {
+    color: #333;
+    font-size: 18px;
+}
+
+.icon-config {
+    width: 30px;
+    cursor: pointer;
+}
+
+/* Acciones (Consultar, Registrar, Escanear QR) */
+.actions {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #899752; /* Color de fondo para que parezca botón */
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+    width: 70px; /* Tamaño fijo de botón */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto de botón */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para hover */
+}
+
+.icon-action {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.action p {
+    color: #fff; /* Texto blanco para que contraste con el fondo */
+    font-size: 14px;
+    margin: 0; /* Elimina margen para centrar el texto */
+}
+
+/* Efecto de hover para que parezca más interactivo */
+.action:hover {
+    background-color: #6e7e3b; /* Cambio de color al pasar el cursor */
+    transform: translateY(-5px); /* Hace que el botón "salte" hacia arriba ligeramente */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Incrementa la sombra para dar más profundidad */
+}
+
+/* Botón de salir */
+.logout-button {
+    margin-top: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #899752;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #000;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Estilos para el fondo */
+.fondo {
+    background-image: url('/conexionPaginas/crearcuenta/media/WhatsApp\ Image\ 2024-09-25\ at\ 4.37.48\ PM.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 900px; /* Tamaño similar al formulario */
+    height: 590px;
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ocultar fondo en pantallas pequeñas */
+@media (max-width: 768px) {
+    .fondo {
+        display: none;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .dashboard-container {
+        width: 90%;
+    }
+}
+

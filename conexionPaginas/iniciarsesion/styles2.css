@@ -1,0 +1,124 @@
+/* Estilos globales */
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #95aa61;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal que usa Flexbox para alinear los elementos */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 20px; /* Añade un espacio entre el formulario y la imagen */
+}
+
+/* Estilos del formulario */
+.login-container {
+    background-color: #D6E68A;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra para efecto de flotación */
+    text-align: center;
+    width: 300px;
+    height: 530px; /* Altura automática para permitir que el contenido determine la altura */
+}
+
+/* Logo */
+.logo img {
+    width: 160px;
+    margin-bottom: 20px;
+}
+
+/* Título */
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Grupos de entrada */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+    
+}
+
+/* Etiquetas */
+.input-group label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Entradas de texto y checkbox */
+.input-group input[type="text"], .input-group input[type="password"] {
+    width: 93%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #000000;
+}
+
+.input-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Botón de envío */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #899752;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid #000000;
+    
+}
+
+button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Estilos para la imagen */
+.fondo {
+    background-image: url('/conexionPaginas/crearcuenta/media/WhatsApp\ Image\ 2024-09-25\ at\ 4.37.48\ PM.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 900px; /* Mismo tamaño que el formulario */
+    height: 590px; /* Ajusta la altura automáticamente */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra similar al formulario */
+}
+
+/* Ocultar la imagen en pantallas pequeñas */
+@media (max-width: 768px) {
+    .fondo {
+        display: none; /* La imagen desaparece en pantallas pequeñas */
+    }
+
+    .main-container {
+        flex-direction: column; /* Alinea solo el formulario en pantalla pequeña */
+    }
+
+    .login-container {
+        width: 90%; /* Formulario ocupa más espacio en pantallas pequeñas */
+    }
+}
+
+

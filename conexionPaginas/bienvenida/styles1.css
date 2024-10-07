@@ -1,0 +1,95 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #95aa61;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 20px; /* Añade un espacio entre el formulario y la imagen */
+}
+
+/* Estilos del formulario */
+.login-container {
+    background-color: #D6E68A;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    height: 530px;
+}
+
+/* Logo */
+.logo img {
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+/* Botones de Iniciar Sesión y Registrarse */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Estilos para los botones */
+.btn {
+    display: inline-block;
+    padding: 10px ;
+    background-color: #899752;
+    color: black;
+    border: 1px solid #000;
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 40%; /* Para que ambos botones ocupen la misma anchura */
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Efecto hover para los botones */
+.btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Estilos para la imagen */
+.fondo {
+    background-image: url(/conexionPaginas/bienvenida/WhatsApp\ Image\ 2024-09-25\ at\ 4.37.48\ PM.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 900px;
+    height: 590px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(249, 2, 2, 0.2);
+}
+
+/* Ocultar la imagen en pantallas pequeñas */
+@media (max-width: 768px) {
+    .fondo {
+        display: none;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .login-container {
+        width: 90%;
+    }
+}
+

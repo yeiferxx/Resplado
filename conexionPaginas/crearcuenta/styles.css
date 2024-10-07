@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    background-color: #95aa51;
+    color: #000000;
+}
+.formulario{
+    background-color:#D6E68A;
+    color: #000000;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.input-group{
+    background-color: #D6E68A;
+    color: #ffffff;
+}
+
+form{
+    background-color: #D6E68A;
+    align-items:center;
+    color: #ffff;
+    padding: 50px;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+form h2{
+    background-color: #D6E68A;
+    font-size: 25px;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.input-container{
+    background-color: #D6E68A;
+    color: #ffff;
+    position: relative;
+}
+
+.input-container > i{
+    background-color: #D6E68A;
+    padding: 14px;
+    border-radius: 50%;
+    background-color: #02B1F4;
+    color:#ffff;
+    position: absolute;
+    font-size: 20px;
+    top: 4px;
+    left: 10px;
+}
+
+.input-container > input, textarea{
+    background-color: white;
+    color: #000000;
+    padding: 17px 15px 17px 65px;
+    width: 100%;
+    margin-bottom: 25px;
+    border-radius: 35px;
+    border: 2px solid #ffffff;
+    font-size: 16px;
+    outline: none;
+}
+
+textarea{
+    background-color:#D6E68A;
+    font-family: 'Poppins', sans-serif;
+    height: 150px;
+}
+
+::placeholder{
+    color: #dfd9d9;
+    font-size: 16px;
+}
+
+.btn{
+    background-color:#899752;
+    
+    padding: 17px 30px;
+    width: 100%;
+    border: 2px solid #eb6b2b;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 35px;
+    color:#000000;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+
+.checkbox-container {
+    background-color: #D6E68A;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox {
+    border-radius: 35px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px; /* Espacio entre casilla y texto */
+}
+
+.checked {
+    background-color:#ffffff;
+}
+
+
+.label-text {
+    font-size: 18px;
+    background-color: #D6E68A;
+}
+
+.otrocorreo{
+    color: rgb(255, 255, 255); 
+    text-decoration: none;
+    border: 2px solid #eb6b2b;
+    padding: 20px;
+    border-radius: 35px;
+}
+.servicio-1{
+    background-color:#D6E68A;
+}
+
+h3{
+    background-color: #D6E68A;
+}
+
+.inic{
+    background-color:#D6E68A;
+}
+
+
+
+
+
+.imgder{
+    position: relative;
+    width:80%;
+    height: 1030px;
+    
+}
+
+.inferior{
+    background-color:#D6E68A;
+}
+
+@media (max-width: 768px) {
+    .imgder {
+        display: none; /* Oculta la imagen en pantallas menores a 768px */
+    }
+
+    .formulario{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
