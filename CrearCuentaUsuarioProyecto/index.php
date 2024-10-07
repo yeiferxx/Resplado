@@ -91,7 +91,8 @@
             </div>
 
             <div class="formulario__grupo formulario__grupo-btn-enviar">
-                <button type="submit" class="formulario__btn">CREAR</button>
+                <button type="submit" class="formulario__btn">CREAR CUENTA</button>
+                <p><b>¿</b>Ya tienes cuenta <b>? Iniciar Sesión</b></p>
                 <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
             </div>
         </form>
@@ -105,7 +106,7 @@
         </div>
     </main>
 
-
+    <script src=js\formulario.js></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     
     

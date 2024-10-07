@@ -61,6 +61,7 @@ main {
 }
 
 .formulario {
+	
 	max-width: 50%; /* El formulario ocupa hasta el 50% del ancho de la pantalla */
 	display: grid;
 	grid-template-columns: 1fr 1fr; /* Dos columnas para pantallas grandes */

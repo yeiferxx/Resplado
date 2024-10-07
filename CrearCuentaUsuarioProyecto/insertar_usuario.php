@@ -3,7 +3,7 @@
 $host = "localhost";
 $usuario = "root";
 $contraseña = "";
-$base_datos = "usuarios";
+$base_datos = "vaqr_db";
 
 // Crear la conexión
 $conexion = new mysqli($host, $usuario, $contraseña, $base_datos);
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password_encriptada = password_hash($password, PASSWORD_BCRYPT);
 
     // Comprobar si el correo ya está registrado
-    $consulta_correo = "SELECT * FROM usuarios WHERE correo = '$correo'";
+    $consulta_correo = "SELECT * FROM usuario WHERE Correo = '$correo'";
     $resultado_correo = $conexion->query($consulta_correo);
 
     if ($resultado_correo->num_rows > 0) {
@@ -44,13 +44,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Insertar los datos en la base de datos
-    $sql = "INSERT INTO usuarios (nombre, correo, correoAlternativo, password) VALUES ('$nombre', '$correo', '$correoAlternativo', '$password_encriptada')";
+    $sql = "INSERT INTO usuario (Nombre, Correo, correo_recuperacion, Contraseña) VALUES ('$nombre', '$correo', '$correoAlternativo', '$password_encriptada')";
 
     if ($conexion->query($sql) === TRUE) {
         echo "<script>
                 alert('Usuario registrado exitosamente.');
                 window.location.href='index.php';
-              </script>";
+                </script>";
     } else {
         echo "Error: " . $sql . "<br>" . $conexion->error;
     }
