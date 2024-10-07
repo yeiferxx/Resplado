@@ -1,0 +1,257 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0; /* Elimina el margen predeterminado del body */
+	padding: 0; /* Elimina cualquier padding en el body */
+	overflow-x: hidden; /* Evita desbordamientos horizontales */
+}
+
+/* Estilo para el div del logo */
+.content-logo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	max-width: 30%;
+}
+
+@media only screen and (max-width: 800px) {
+	body {
+		background-image: url(/CrearCuentaUsuarioProyecto/fondo\ Vaqr.png);
+	}
+
+	.logo {
+		max-width: 45%;
+	}
+
+	.main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		max-width: 100%; /* Asegúrate de que no se desborde el ancho */
+		padding: 0 20px; /* Añade algo de padding interno */
+		box-sizing: border-box; /* Incluye el padding dentro del ancho y alto */
+	}
+	
+	.formulario {
+		display: flex;
+		flex-direction: column; /* Si quieres que los elementos dentro del formulario estén en columna */
+		position: relative;
+		max-width: 90%; /* Cambiado para mejor ajuste en pantallas pequeñas */
+	}
+}
+
+/*-----------------------------*/
+
+main {
+	background-image: url(/CrearCuentaUsuarioProyecto/fondo\ Vaqr.png);
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Alinea el contenido horizontalmente */
+	justify-content: center; /* Centra el contenido verticalmente */
+	min-height: 100vh; /* Ocupa todo el alto del viewport */
+	width: 100%;
+}
+
+.formulario {
+	max-width: 50%; /* El formulario ocupa hasta el 50% del ancho de la pantalla */
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* Dos columnas para pantallas grandes */
+	gap: 29px;
+	justify-items: center; /* Centra los elementos dentro de cada celda de la cuadrícula */
+}
+
+.formulario__label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.formulario__grupo-input {
+	display: flex;
+	flex-shrink: 1; 
+	flex-direction: column;
+	align-items: center;
+	width: 100%; /* Asegura que el grupo de input ocupe todo el ancho */
+}
+
+.formulario__input {
+	width: 100%; /* El input ocupa todo el ancho disponible */
+	background: #fff;
+	border: 3px solid transparent; /* Borde transparente por defecto */
+	border-radius: 30px;
+	height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.formulario__input:focus {
+	border-color: #0075FF; /* Cambia el color del borde al enfocar */
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.formulario__input-error {
+	font-size: 12px;
+	margin: 10px 20px 20px;
+	margin-bottom: 0;
+	position: relative;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: inline-block;
+}
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario__checkbox {
+	margin-right: 10px;
+}
+
+.formulario__grupo-terminos,
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2; /* Ocupa dos columnas en el grid */
+}
+
+.formulario__mensaje {
+	display: flex;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+
+}
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario__btn {
+	height: 45px;
+	line-height: 45px;
+	width:250px;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+}
+
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validación ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border-color: #bb2929; /* Cambia solo el color del borde en caso de error */
+}
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+		max-width: 90%; /* Cambia el ancho máximo para pantallas pequeñas */
+	}
+
+
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1; /* Asegúrate de que estos elementos ocupen la única columna */
+	}
+
+
+}
+
+.modal {
+	display: none; /* Oculto por defecto */
+	position: fixed; /* Fijo */
+	z-index: 1; /* Se coloca encima de todo */
+	left: 0;
+	top: 0;
+	width: 100%; /* Ancho completo */
+	height: 100%; /* Alto completo */
+	overflow: auto; /* Habilita scroll si es necesario */
+	background-color: rgb(0, 0, 0); /* Color de fondo */
+	background-color: rgba(0, 0, 0, 0.4); /* Fondo negro con opacidad */
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% desde arriba y centrado */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; /* Ancho del modal */
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+
+
+
+
